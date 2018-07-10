@@ -30,4 +30,4 @@ Visit http://0.0.0.0:4000 in a browser, edit some of the content, reload and
 Once happy with the site, build it again and serve via the container like so:
 
     $ docker build -t thin-site .
-    $ docker run -it --rm --name thin -p 4000:4000 thin-site
+    $ docker run -it --rm --name thin -p 4000:80 thin-site

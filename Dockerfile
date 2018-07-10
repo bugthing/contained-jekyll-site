@@ -4,6 +4,7 @@ RUN apk update && \
     apk add g++ make nginx && \
     rm -rf /var/cache/apk/*
 WORKDIR /usr/src/app
+EXPOSE 80
 EXPOSE 4000
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
