@@ -23,9 +23,9 @@ current directory inside the container as we start it. This means changes to
 files in current directory will be served by the webserver running in the container.
 You can fire up the container and then edit site as need like so:
 
-    $ docker run -it --rm -v `pwd`:/usr/src/app -p 4000:4000 thin-site bundle exec jekyll serve --host=0.0.0.0
+    $ docker run -it --rm -v `pwd`:/app -p 4000:4000 thin-site bundle exec jekyll serve --host=0.0.0.0
 
-Visit http://0.0.0.0:4000 in a browser, edit some of the content, reload and 
+Visit http://0.0.0.0:4000 in a browser, edit some of the content, reload and
 
 Once happy with the site, build it again and serve via the container like so:
 

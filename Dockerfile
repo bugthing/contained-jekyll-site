@@ -1,9 +1,9 @@
-FROM ruby:2.5.1-alpine
+FROM ruby:3.1-alpine
 RUN apk update && \
     apk upgrade && \
     apk add g++ make nginx && \
     rm -rf /var/cache/apk/*
-WORKDIR /usr/src/app
+WORKDIR /app
 EXPOSE 80
 EXPOSE 4000
 COPY Gemfile Gemfile.lock ./

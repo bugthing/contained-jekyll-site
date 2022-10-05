@@ -10,16 +10,16 @@ echo "events {                                         " >> /tmp/nginx.conf
 echo "    worker_connections  1024;                    " >> /tmp/nginx.conf
 echo "}                                                " >> /tmp/nginx.conf
 echo "http {                                           " >> /tmp/nginx.conf
-echo "  access_log /dev/stdout;                        " >> /tmp/nginx.conf
 echo "  include /etc/nginx/mime.types;                 " >> /tmp/nginx.conf
-echo "  gzip on;                                       " >> /tmp/nginx.conf
-echo "  gzip_http_version 1.1;                         " >> /tmp/nginx.conf
-echo "  gzip_comp_level 2;                             " >> /tmp/nginx.conf
-echo "  gzip_types text/plain application/javascript application/x-javascript text/javascript text/xml text/css;" >> /tmp/nginx.conf
 echo "  server {                                       " >> /tmp/nginx.conf
+echo "    gzip on;                                     " >> /tmp/nginx.conf
+echo "    gzip_http_version 1.1;                       " >> /tmp/nginx.conf
+echo "    gzip_comp_level 2;                           " >> /tmp/nginx.conf
+echo "    gzip_types text/plain application/javascript application/x-javascript text/javascript text/xml text/css;" >> /tmp/nginx.conf
 echo "    listen 0.0.0.0:80;                           " >> /tmp/nginx.conf
+echo "    access_log /dev/stdout;                      " >> /tmp/nginx.conf
 echo "    location / {                                 " >> /tmp/nginx.conf
-echo "      root  /usr/src/app/_site;                  " >> /tmp/nginx.conf
+echo "      root  /app/_site;                          " >> /tmp/nginx.conf
 echo "    }                                            " >> /tmp/nginx.conf
 echo "  }                                              " >> /tmp/nginx.conf
 echo "} " >> /tmp/nginx.conf
