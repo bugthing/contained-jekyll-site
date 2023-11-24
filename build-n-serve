@@ -2,6 +2,8 @@
 
 bundle exec jekyll build
 
+echo "" > /tmp/nginx.conf
+
 echo "daemon off;                                      " >> /tmp/nginx.conf
 echo "worker_processes 1;                              " >> /tmp/nginx.conf
 echo "pid /run/nginx.pid;                              " >> /tmp/nginx.conf
