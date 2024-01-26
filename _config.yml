@@ -1,2 +1,5 @@
 name: Thin web site
 url: http://bugthing.github.io
+exclude:
+  - README.md
+  - Dockerfile

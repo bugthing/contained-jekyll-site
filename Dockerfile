@@ -9,4 +9,5 @@ EXPOSE 4000
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 COPY . .
-CMD ./build-n-serve
+RUN mv build-n-serve /usr/local/build-n-serve
+CMD /usr/local/build-n-serve
